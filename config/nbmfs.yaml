@@ -1,0 +1,52 @@
+# python experiment_nam.py --config-name nbmfs dataset=dataset_name experiment_name=test
+
+experiment_name: ???
+dataset: ???
+valid_metric: ACC
+validation_rate: 0.1
+run_num: 10
+gpu_id: 0  # negative value indicates CPU# python experiment_nam.py --config-name nbm dataset=dataset_name experiment_name=test
+
+# Model parameters
+model:
+  name: NBMFS
+
+  one_input_shape_num: 10
+  two_input_shape_num: 10
+  feature_sel: Entmax
+  bases_num: 100  # should be 200 if pairwise is True
+  hidden_dims:
+    - 256
+    - 128
+    - 128
+
+  batch_norm: True
+
+  # Training parameters
+  validation_period: 500
+  batch_size: 1024
+  init_lr:  0.01
+  lr_decay: 0.2
+  lr_decay_patience: 5000
+  max_iteration: 100000
+  early_stopping_patience: 11000
+  annealing_iteration: 4000
+  max_temperature: 1
+  min_temperature: 0.01
+  annealing_schedule: linear
+
+grid_search_space:
+  dropout_rate:
+    - 0.0
+    - 0.2
+    - 0.5
+  bases_dropout:
+    - 0.0
+    - 0.5
+  weight_decay:
+    - 0.0
+    - 1e-4
+  output_penalty:
+    - 0.0
+    - 0.01
+    - 0.1

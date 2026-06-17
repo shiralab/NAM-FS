@@ -1,0 +1,43 @@
+# python experiment_baseline.py --config-name nodegam dataset=dataset_name experiment_name=test
+experiment_name: ???
+dataset: ???
+validation_rate: 0.1
+run_num: 10
+
+name: NODE-GAM
+
+# Model parameters
+model:
+  device:
+    - cpu  # or cuda:0
+  ga2m:
+    - 0  # 1 for GA2M
+
+  # Training parameters
+  report_frequency:
+    - 500
+  lr_decay_steps:
+    - 5000
+  max_steps:
+    - 100000
+  max_time:
+    - 20000
+  early_stopping_steps:
+    - 11000
+  anneal_steps:
+    - 4000
+
+  arch:
+    - GAM
+    - GAMAtt
+  num_trees:
+    - 200
+    - 500
+  num_layers:
+    - 2
+    - 3
+    - 4
+  depth:
+    - 2
+    - 4
+    - 6

@@ -1,0 +1,46 @@
+# python experiment_baseline.py --config-name mlp dataset=dataset_name experiment_name=test
+
+experiment_name: ???
+dataset: ???
+validation_rate: 0.1
+run_num: 10
+gpu_id: 0  # negative value indicates CPU
+
+name: MLP
+
+# Model parameters
+model:
+  # Training parameters
+  validation_period:
+    - 500
+  batch_size:
+    - 1024
+  init_lr:
+    - 0.01
+  lr_decay:
+    - 0.2
+  lr_decay_patience:
+    - 5000
+  max_iteration:
+    - 100000
+  early_stopping_patience:
+    - 11000
+
+  batch_norm:
+    - True
+  activation:
+    - relu
+
+  hidden_dims:
+    - [128, 128, 64, 64, 64]
+    - [1024, 512, 512]
+    - [2048, 1024]
+  dropout_rate:
+    - 0.0
+    - 0.2
+    - 0.5
+  weight_decay:
+    - 0.0
+    - 1e-4
+
+

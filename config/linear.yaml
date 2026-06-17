@@ -1,0 +1,22 @@
+# python experiment_baseline.py --config-name linear dataset=dataset_name experiment_name=test
+experiment_name: ???
+dataset: ???
+validation_rate: 0.1
+run_num: 10
+
+name: LR
+
+# Model parameters
+model:
+  max_iter:
+    - 1000
+  penalty:
+    - l1
+    - l2
+  C:
+    - 0.01
+    - 0.1
+    - 1
+    - 10
+    - 100
+    - 1000

@@ -1,0 +1,30 @@
+# python experiment_baseline.py --config-name xgb dataset=dataset_name experiment_name=test
+experiment_name: ???
+dataset: ???
+validation_rate: 0.1
+run_num: 10
+
+name: XGB
+
+# Model parameters
+model:
+  early_stopping_rounds:
+    - 50
+  n_estimators:
+    - 100
+    - 200
+    - 500
+    - 1000
+  max_depth:
+    - 2
+    - 4
+    - 8
+    - 16
+  colsample_bytree:
+    - 0.5
+    - 0.8
+    - 1.0
+  subsample:
+    - 0.5
+    - 0.8
+    - 1.0

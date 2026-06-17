@@ -1,0 +1,21 @@
+# python experiment_baseline.py --config-name ebm dataset=dataset_name experiment_name=test
+experiment_name: ???
+dataset: ???
+validation_rate: 0.1
+run_num: 10
+
+name: EBM
+
+# Model parameters
+model:
+  outer_bags:
+    - 4
+    - 8
+    - 16
+  inner_bags:
+    - 0
+    - 4
+    - 8
+  interactions:
+    - 0
+    # for EB2M, set as 'grid_search_space=[16,32,64,128]'

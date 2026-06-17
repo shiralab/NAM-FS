@@ -1,0 +1,26 @@
+# python experiment_baseline.py --config-name dt dataset=dataset_name experiment_name=test
+experiment_name: ???
+dataset: ???
+validation_rate: 0.1
+run_num: 10
+
+name: DT
+
+# Model parameters
+model:
+  criterion:
+    - gini
+    - entropy
+  max_depth:
+    - 4
+    - 8
+    - 16
+    - 32
+  min_samples_split:
+    - 2
+    - 8
+    - 16
+  min_samples_leaf:
+    - 1
+    - 8
+    - 16
