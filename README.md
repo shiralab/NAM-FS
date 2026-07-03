@@ -2,9 +2,7 @@
 
 This repository provides the code for the following paper.
 
-```
-Yasutoshi Kishimoto, Kota Yamanishi, Takuya Matsuda, and Shinichi Shirakawa, "Neural Additive and Basis Models with Feature Selection and Interactions," PAKDD 2024.
-```
+- Yasutoshi Kishimoto, Kota Yamanishi, Takuya Matsuda, and Shinichi Shirakawa, "Neural Additive and Basis Models with Feature Selection and Interactions," *PAKDD 2024*.
 
 ## Directory
 ```
@@ -113,4 +111,4 @@ When using the Epsilon and Fashion MNIST datasets, please locate the downloaded 
     ```
 
 ## Reference
-Yasutoshi Kishimoto, Kota Yamanishi, Takuya Matsuda, and Shinichi Shirakawa, "Neural Additive and Basis Models with Feature Selection and Interactions," Proceedings of the 28th Pacific-Asia Conference on Knowledge Discovery and Data Mining (PAKDD 2024), Part III, Vol. 14647 of LNAI, pp. 3-16, 2024. [[DOI](https://doi.org/10.1007/978-981-97-2259-4_1)] [[arXiv](https://doi.org/10.48550/arXiv.2606.19850)]
+Yasutoshi Kishimoto, Kota Yamanishi, Takuya Matsuda, and Shinichi Shirakawa, "Neural Additive and Basis Models with Feature Selection and Interactions," *Proceedings of the 28th Pacific-Asia Conference on Knowledge Discovery and Data Mining (PAKDD 2024), Part III*, Vol. 14647 of LNAI, pp. 3-16, 2024. [[DOI](https://doi.org/10.1007/978-981-97-2259-4_1)] [[arXiv](https://doi.org/10.48550/arXiv.2606.19850)]
